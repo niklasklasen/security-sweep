@@ -1,0 +1,76 @@
+[
+  {
+    "run_date": "2026-09-10",
+    "session_id": "027b25ab-cb1d-447a-b997-322f69859601",
+    "requests": 35,
+    "input_tokens": 1545549,
+    "output_tokens": 33498,
+    "cached_tokens": 732794,
+    "agents": [
+      {
+        "agent": "ti-research",
+        "model": "gpt-5.6-luna",
+        "requests": 3,
+        "input_tokens": 349205,
+        "output_tokens": 5232,
+        "cached_tokens": 81612
+      },
+      {
+        "agent": "orchestrator",
+        "model": "gpt-5.6-luna",
+        "requests": 11,
+        "input_tokens": 318989,
+        "output_tokens": 12650,
+        "cached_tokens": 252889
+      },
+      {
+        "agent": "ti-practitioner",
+        "model": "gpt-5.6-luna",
+        "requests": 4,
+        "input_tokens": 218614,
+        "output_tokens": 1638,
+        "cached_tokens": 124701
+      },
+      {
+        "agent": "ti-vendor",
+        "model": "gpt-5.6-luna",
+        "requests": 3,
+        "input_tokens": 216572,
+        "output_tokens": 1903,
+        "cached_tokens": 50285
+      },
+      {
+        "agent": "ti-incidents",
+        "model": "gpt-5.6-luna",
+        "requests": 5,
+        "input_tokens": 175006,
+        "output_tokens": 1547,
+        "cached_tokens": 120398
+      },
+      {
+        "agent": "ti-supplychain",
+        "model": "gpt-5.6-luna",
+        "requests": 4,
+        "input_tokens": 148508,
+        "output_tokens": 3626,
+        "cached_tokens": 48298
+      },
+      {
+        "agent": "ti-standards",
+        "model": "gpt-5.6-luna",
+        "requests": 4,
+        "input_tokens": 104037,
+        "output_tokens": 2356,
+        "cached_tokens": 54611
+      },
+      {
+        "agent": "ti-synthesizer",
+        "model": "gpt-5.6-luna",
+        "requests": 1,
+        "input_tokens": 14618,
+        "output_tokens": 4546,
+        "cached_tokens": 0
+      }
+    ]
+  }
+]

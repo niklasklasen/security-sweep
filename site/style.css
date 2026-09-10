@@ -119,12 +119,17 @@ header {
   border-radius: 999px;
   height: 0.55rem;
   overflow: hidden;
+  display: flex;
 }
 
 .bar-fill {
   display: block;
   height: 100%;
   background: var(--accent);
+}
+
+.bar-fill.out {
+  background: light-dark(#e0762b, #f0a868);
 }
 
 .bar-value {
@@ -168,6 +173,43 @@ header {
 
 .flow li {
   margin-bottom: 0.3rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.stat {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.stat strong {
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.swatch.out {
+  background: light-dark(#e0762b, #f0a868);
+  margin-left: 0.75rem;
 }
 
 @media (max-width: 520px) {

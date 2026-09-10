@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Token usage &middot; AI Security Threat Sweep</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Token usage</h1>
+    <nav class="nav">
+      <a href="index.html">Latest run</a>
+      <a href="stats.html">Statistics</a>
+      <a href="usage.html" aria-current="page">Token usage</a>
+      <a href="team.html">The team</a>
+    </nav>
+    <p id="usage-meta" class="muted"></p>
+  </header>
+
+  <main id="usage" aria-live="polite"></main>
+
+  <footer class="muted">
+    <p>Collected from Copilot debug logs by <code>tools/collect-usage.py</code>. Source: <a href="data/usage.json">usage.json</a>.</p>
+  </footer>
+
+  <script src="usage.js"></script>
+</body>
+</html>

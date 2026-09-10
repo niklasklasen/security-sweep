@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Collect sweep usage",
+      "type": "shell",
+      "command": "python3 tools/collect-usage.py",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Preview site",
+      "type": "shell",
+      "command": "python3 -m http.server 8765 --directory site",
+      "dependsOn": "Collect sweep usage",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

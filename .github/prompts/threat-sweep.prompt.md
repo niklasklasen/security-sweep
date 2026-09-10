@@ -83,6 +83,10 @@ each (`title — reason`) so the threshold stays auditable, without restating UR
 reprint the published items — they are already in the diff. Remind the user the changes to
 `site/data/*.json` are unstaged.
 
+Close by telling the user to run `python3 tools/collect-usage.py` to record this run's token
+usage. Do not run it yourself — the debug logs it reads are still being written while you are
+still answering.
+
 ## Cost discipline
 
 The sweep runs on a schedule, so every avoidable token is a recurring bill.
