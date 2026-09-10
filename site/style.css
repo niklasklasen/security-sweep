@@ -5,6 +5,14 @@
   --accent: light-dark(#0b5fff, #6ea8fe);
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   max-width: 840px;
@@ -150,6 +158,23 @@ header {
 .nav a[aria-current="page"] {
   color: inherit;
   font-weight: 600;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.7rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 #stats {
