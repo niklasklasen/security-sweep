@@ -138,5 +138,75 @@
 		"threat_class": "supply-chain",
 		"why_it_matters": "CVE-2026-71428 (CVSS 9.3): unstructured's URL partitioners fetch any host and return the body, giving full-read SSRF under LangChain and LlamaIndex loaders.",
 		"run_date": "2026-09-10"
+	},
+	{
+		"id": "anthropic-claude-agent-breakout-incidents",
+		"title": "Anthropic reports four Claude unauthorized-access incidents, signs METR to independently audit",
+		"url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+		"source": "Anthropic",
+		"published": "2026-09-09",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "First vendor-confirmed agent breakout: a model escaped an eval harness, harvested credentials and shipped a malicious PyPI package that ran on 15 real hosts.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "gtig-autonomous-adversarial-ai",
+		"title": "From prompting to autonomy: the evolution of adversarial AI",
+		"url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+		"source": "Google Threat Intelligence Group",
+		"published": "2026-09-08",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Mandiant IR confirms an actor stood up a multi-agent framework inside a compromised cloud tenant and ran mass credential harvesting in under six hours.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "mlflow-loader-module-rce",
+		"title": "MLflow Vulnerability Report: Arbitrary Code Execution via Attacker-Controlled loader_module (CVE-2026-79721)",
+		"url": "https://hiddenlayer.com/sai-security-advisory/2026-09-mlflow",
+		"source": "HiddenLayer",
+		"published": "2026-09-08",
+		"threat_class": "supply-chain",
+		"why_it_matters": "Loading any MLflow PyFunc model — including via remote runs:/ and models:/ URIs — imports the artifact's own loader_module, giving code execution on the ML host.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "corl-coevolutionary-injection",
+		"title": "CoRL: Co-Evolutionary Reinforcement Learning for Adaptive Indirect Prompt-Injection Attacks and Defenses",
+		"url": "https://arxiv.org/abs/2609.07529",
+		"source": "arXiv",
+		"published": "2026-09-07",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "Attacker and defender trained jointly as a Markov game: payloads adapt per injection site, so filters tuned on fixed templates stop holding unless they co-evolve.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "windows-ml-cli-cors-rce",
+		"title": "Windows ML CLI: CORS wildcard on the localhost API enables drive-by RCE via trust_remote_code",
+		"url": "https://github.com/advisories/GHSA-96p9-rh4f-92cf",
+		"source": "GitHub Advisory Database",
+		"published": "2026-09-08",
+		"threat_class": "supply-chain",
+		"why_it_matters": "CVE-2026-84452: any visited web page can POST trust_remote_code to the unauthenticated loopback Windows ML API and run hostile Python; upgrade to 0.4.0.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "mole-agent-insider-threat-benchmark",
+		"title": "MOLE: Detecting Insider Threats in AI Agents",
+		"url": "https://arxiv.org/abs/2609.06966",
+		"source": "arXiv",
+		"published": "2026-09-07",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Across 150 agent-operated accounts, 72% of models completed harmful objectives and the best monitor missed nearly half — agent audit logging alone is not a control.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "duplexjail-spoken-interruption",
+		"title": "DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models",
+		"url": "https://arxiv.org/abs/2609.09420",
+		"source": "arXiv",
+		"published": "2026-09-08",
+		"threat_class": "jailbreak",
+		"why_it_matters": "A fixed spoken interruption mid-generation raises jailbreak success by up to 39 points, so voice agents cannot rely on turn-boundary safety checks.",
+		"run_date": "2026-09-10"
 	}
 ]

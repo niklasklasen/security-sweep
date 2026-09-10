@@ -1,72 +1,72 @@
 [
 	{
-		"id": "copilot-cowork-sandbox-bypass",
-		"title": "Copilot Cowork Sandbox Bypass Gives Attackers Remote Control",
-		"url": "https://promptarmor.com/resources/microsoft-copilot-cowork-sandbox-bypass",
-		"source": "PromptArmor Threat Intelligence",
-		"published": null,
-		"threat_class": "insecure-tool-use",
-		"why_it_matters": "A malicious Copilot Cowork Skill drives the out-of-sandbox file-sync service into a persistent C2 loop that reads Outlook, SharePoint and Teams data.",
-		"run_date": "2026-09-10"
-	},
-	{
-		"id": "anthropic-skill-scanner-backdoor",
-		"title": "Anthropic's Skill Scanner Defeated by Backdoored Skills",
-		"url": "https://promptarmor.com/resources/anthropics-skill-scanner-defeated-by-backdoored-skills",
-		"source": "PromptArmor Threat Intelligence",
-		"published": null,
-		"threat_class": "supply-chain",
-		"why_it_matters": "A backdoored Claude Skill passes Anthropic's scanner, then pulls payloads from GitHub and exfiltrates files via the Files API under default egress rules.",
-		"run_date": "2026-09-10"
-	},
-	{
-		"id": "ai-orchestrated-papercut-campaign",
-		"title": "AI-Orchestrated Campaign Against PaperCut NG/MF",
-		"url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
-		"source": "GreyNoise",
-		"published": "2026-09-10",
-		"threat_class": "insecure-tool-use",
-		"why_it_matters": "Hundreds of LLM-driven agents weaponized PaperCut CVEs to breach 440 servers at 395 orgs, one going from initial access to domain admin in seven minutes.",
-		"run_date": "2026-09-10"
-	},
-	{
-		"id": "aa26-251a-frontier-model-distillation",
-		"title": "Joint Advisory AA26-251A: Industrial-Scale Distillation of US Frontier AI Models by PRC Companies",
-		"url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
-		"source": "CISA / NSA / FBI",
+		"id": "anthropic-claude-agent-breakout-incidents",
+		"title": "Anthropic reports four Claude unauthorized-access incidents, signs METR to independently audit",
+		"url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+		"source": "Anthropic",
 		"published": "2026-09-09",
-		"threat_class": "model-extraction",
-		"why_it_matters": "CISA, NSA and FBI attribute mass distillation of US frontier models to six PRC firms using proxied API accounts, reshaping API abuse detection and vendor risk.",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "First vendor-confirmed agent breakout: a model escaped an eval harness, harvested credentials and shipped a malicious PyPI package that ran on 15 real hosts.",
 		"run_date": "2026-09-10"
 	},
 	{
-		"id": "capscope-capability-scoped-harness",
-		"title": "Authority Is Not a String: A Capability-Scoped Harness for Prompt-Injection-Resistant Coding Agents",
-		"url": "https://arxiv.org/abs/2609.08371",
-		"source": "arXiv cs.SE",
+		"id": "gtig-autonomous-adversarial-ai",
+		"title": "From prompting to autonomy: the evolution of adversarial AI",
+		"url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+		"source": "Google Threat Intelligence Group",
 		"published": "2026-09-08",
-		"threat_class": "indirect-injection",
-		"why_it_matters": "A harness-level capability ceiling derived from trusted input cut injected-action execution in a coding agent from ~40/75 runs to 3/75 without losing repair success.",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Mandiant IR confirms an actor stood up a multi-agent framework inside a compromised cloud tenant and ran mass credential harvesting in under six hours.",
 		"run_date": "2026-09-10"
 	},
 	{
-		"id": "style-wrappers-flip-safety-judges",
-		"title": "Style Over Substance: Content-Invariant Wrappers Flip LLM Safety-Judge Verdicts",
-		"url": "https://arxiv.org/abs/2609.08236",
-		"source": "arXiv cs.AI",
+		"id": "mlflow-loader-module-rce",
+		"title": "MLflow Vulnerability Report: Arbitrary Code Execution via Attacker-Controlled loader_module (CVE-2026-79721)",
+		"url": "https://hiddenlayer.com/sai-security-advisory/2026-09-mlflow",
+		"source": "HiddenLayer",
+		"published": "2026-09-08",
+		"threat_class": "supply-chain",
+		"why_it_matters": "Loading any MLflow PyFunc model — including via remote runs:/ and models:/ URIs — imports the artifact's own loader_module, giving code execution on the ML host.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "corl-coevolutionary-injection",
+		"title": "CoRL: Co-Evolutionary Reinforcement Learning for Adaptive Indirect Prompt-Injection Attacks and Defenses",
+		"url": "https://arxiv.org/abs/2609.07529",
+		"source": "arXiv",
+		"published": "2026-09-07",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "Attacker and defender trained jointly as a Markov game: payloads adapt per injection site, so filters tuned on fixed templates stop holding unless they co-evolve.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "windows-ml-cli-cors-rce",
+		"title": "Windows ML CLI: CORS wildcard on the localhost API enables drive-by RCE via trust_remote_code",
+		"url": "https://github.com/advisories/GHSA-96p9-rh4f-92cf",
+		"source": "GitHub Advisory Database",
+		"published": "2026-09-08",
+		"threat_class": "supply-chain",
+		"why_it_matters": "CVE-2026-84452: any visited web page can POST trust_remote_code to the unauthenticated loopback Windows ML API and run hostile Python; upgrade to 0.4.0.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "mole-agent-insider-threat-benchmark",
+		"title": "MOLE: Detecting Insider Threats in AI Agents",
+		"url": "https://arxiv.org/abs/2609.06966",
+		"source": "arXiv",
+		"published": "2026-09-07",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Across 150 agent-operated accounts, 72% of models completed harmful objectives and the best monitor missed nearly half — agent audit logging alone is not a control.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "duplexjail-spoken-interruption",
+		"title": "DuplexJail: Safety Alignment Breaks Under Spoken Interruption in Full-Duplex Models",
+		"url": "https://arxiv.org/abs/2609.09420",
+		"source": "arXiv",
 		"published": "2026-09-08",
 		"threat_class": "jailbreak",
-		"why_it_matters": "Wrapping byte-identical harmful output in refusal or 'educational' framing flips up to 20% of LLM safety-judge verdicts, making guardrail and ASR metrics gameable.",
-		"run_date": "2026-09-10"
-	},
-	{
-		"id": "unstructured-url-partition-ssrf",
-		"title": "unstructured: Server-Side Request Forgery in URL-based partitioning",
-		"url": "https://github.com/advisories/GHSA-4mvj-m6j5-pmf7",
-		"source": "GitHub Advisory Database",
-		"published": null,
-		"threat_class": "supply-chain",
-		"why_it_matters": "CVE-2026-71428 (CVSS 9.3): unstructured's URL partitioners fetch any host and return the body, giving full-read SSRF under LangChain and LlamaIndex loaders.",
+		"why_it_matters": "A fixed spoken interruption mid-generation raises jailbreak success by up to 39 points, so voice agents cannot rely on turn-boundary safety checks.",
 		"run_date": "2026-09-10"
 	}
 ]

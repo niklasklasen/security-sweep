@@ -76,18 +76,18 @@
   {
     "run_date": "2026-09-10",
     "session_id": "231cbde7-9fe8-4f79-935d-13b3dc0dc777",
-    "requests": 26,
-    "input_tokens": 1761357,
-    "output_tokens": 30686,
-    "cached_tokens": 1142817,
+    "requests": 63,
+    "input_tokens": 4856449,
+    "output_tokens": 76869,
+    "cached_tokens": 3348434,
     "agents": [
       {
         "agent": "orchestrator",
         "model": "claude-opus-5",
-        "requests": 8,
-        "input_tokens": 700602,
-        "output_tokens": 15868,
-        "cached_tokens": 602642
+        "requests": 27,
+        "input_tokens": 2848838,
+        "output_tokens": 48577,
+        "cached_tokens": 2390041
       },
       {
         "agent": "ti-vendor-toolu_01JvzYrHFkoVkRWa1wgtSPxw",
@@ -98,12 +98,44 @@
         "cached_tokens": 294770
       },
       {
+        "agent": "ti-vendor-toolu_01NTKRLyJ2X5aCp5QMpNTwTy",
+        "model": "claude-opus-5",
+        "requests": 3,
+        "input_tokens": 361916,
+        "output_tokens": 846,
+        "cached_tokens": 97736
+      },
+      {
         "agent": "ti-practitioner-toolu_01MBk3U9vuX4Lx8roSrbSPht",
         "model": "claude-opus-5",
         "requests": 4,
         "input_tokens": 270864,
         "output_tokens": 1771,
         "cached_tokens": 163282
+      },
+      {
+        "agent": "ti-practitioner-toolu_01C5xFw4McJ4gnfMV872MP5J",
+        "model": "claude-opus-5",
+        "requests": 4,
+        "input_tokens": 253302,
+        "output_tokens": 1196,
+        "cached_tokens": 164137
+      },
+      {
+        "agent": "ti-incidents-toolu_01DKtrd281GrtjmV3P4tf4qc",
+        "model": "claude-opus-5",
+        "requests": 5,
+        "input_tokens": 176755,
+        "output_tokens": 3902,
+        "cached_tokens": 124525
+      },
+      {
+        "agent": "ti-research-toolu_016eg6ANgTcQoCBZBWx7NceD",
+        "model": "claude-opus-5",
+        "requests": 2,
+        "input_tokens": 96742,
+        "output_tokens": 2308,
+        "cached_tokens": 7049
       },
       {
         "agent": "ti-research-toolu_01FP9R6WCEDKAcNzNbG92kHh",
@@ -130,11 +162,27 @@
         "cached_tokens": 28255
       },
       {
+        "agent": "ti-supplychain-toolu_01PkuXVViqagsGjieDNPL8Jt",
+        "model": "claude-opus-5",
+        "requests": 3,
+        "input_tokens": 47201,
+        "output_tokens": 2322,
+        "cached_tokens": 23095
+      },
+      {
         "agent": "ti-synthesizer-toolu_01ThKN5RQiH4wxJg1jzsiTCD",
         "model": "claude-opus-5",
         "requests": 1,
         "input_tokens": 10759,
         "output_tokens": 5490,
+        "cached_tokens": 1676
+      },
+      {
+        "agent": "ti-synthesizer-toolu_01NAhwpfYyr8eXcEQ3Emug3F",
+        "model": "claude-opus-5",
+        "requests": 1,
+        "input_tokens": 10940,
+        "output_tokens": 2900,
         "cached_tokens": 1676
       }
     ]
