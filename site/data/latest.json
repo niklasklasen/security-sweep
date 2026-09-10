@@ -1,1 +1,72 @@
-[]
+[
+	{
+		"id": "ascii-smuggling-phishing-evasion",
+		"title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+		"url": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+		"source": "Microsoft Security Research",
+		"published": "2026-09-03",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "Invisible Unicode can hide phishing content and AI instructions, so ingestion pipelines should normalize text before detection and policy evaluation.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "repeat-after-me-visual-prompt-injection",
+		"title": "Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection",
+		"url": "https://arxiv.org/abs/2609.04533",
+		"source": "arXiv",
+		"published": "2026-09-03",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "Adaptive visual prompts induced malicious tool calls and data disclosure, showing that screenshot and document inputs need adversarial testing before agent actions.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "arbitrary-cipher-llm-jailbreak",
+		"title": "Arbitrary Cipher Attacks Against Large Language Models Do Not Require Fine-Tuning",
+		"url": "https://arxiv.org/abs/2609.09553",
+		"source": "arXiv",
+		"published": "2026-09-09",
+		"threat_class": "jailbreak",
+		"why_it_matters": "Ciphered harmful prompts bypass tested safety classifiers, requiring decoded-content inspection and adversarial evaluations beyond ordinary-language filters.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "mmplibench-multimodal-prompt-injection",
+		"title": "An Experimental Evaluation of Multimodal Prompt Injection Attacks on Agentic AI Frameworks",
+		"url": "https://arxiv.org/abs/2609.09404",
+		"source": "arXiv",
+		"published": "2026-09-08",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "MMPIBench finds audio, QR, OCR, overlay, and metadata attacks can complete tool-use chains, so perception layers need end-to-end security tests.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "hierarchical-web-evidence-poisoning",
+		"title": "Evaluating Deep-Search Agents under Hierarchical Web Evidence Poisoning",
+		"url": "https://arxiv.org/abs/2609.06027",
+		"source": "arXiv",
+		"published": "2026-09-05",
+		"threat_class": "poisoning",
+		"why_it_matters": "Hierarchical false evidence survives agent verification, so deep-search systems need trusted-source controls and independent validation before adopting claims.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "ai-coding-agent-configuration-defects",
+		"title": "Scanning the Harness: An Empirical Study of Supply-Chain Defects in AI Coding-Agent Configurations",
+		"url": "https://arxiv.org/abs/2609.07360",
+		"source": "arXiv",
+		"published": "2026-09-07",
+		"threat_class": "supply-chain",
+		"why_it_matters": "An audit found confirmed defects in 16% of coding-agent setups, including unpinned MCP servers and shell-preapproved skills.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "residualauth-revocable-agent-delegation",
+		"title": "ResidualAuth: What Authorization State Must Language Agents Preserve under Revocable Delegation?",
+		"url": "https://arxiv.org/abs/2609.08062",
+		"source": "arXiv",
+		"published": "2026-09-08",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Cached permissions cannot reliably enforce revocation, so agent authorization checks should read current authenticated state before every sensitive action.",
+		"run_date": "2026-09-10"
+	}
+]
