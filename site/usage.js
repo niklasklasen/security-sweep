@@ -28,7 +28,7 @@ function headline(run) {
   const cacheRate = run.input_tokens ? Math.round((cached / run.input_tokens) * 100) : 0;
   return `
     <section class="card headline">
-      <p class="muted">Most recent run &mdash; ${escapeHtml(run.run_date)}</p>
+      <p class="muted">Most recent run &mdash; ${escapeHtml(runLabel(run))}</p>
       <p class="headline-total">${fmt(total(run))}<span class="muted"> tokens</span></p>
       <dl class="headline-split">
         <div><dt>Input</dt><dd>${fmt(run.input_tokens)}</dd></div>
@@ -50,7 +50,7 @@ function runList(runs) {
           (run, i) => `
       <details class="finding"${i === 0 ? " open" : ""}>
         <summary>
-          <span class="finding-title">${escapeHtml(run.run_date)}</span>
+          <span class="finding-title">${escapeHtml(runLabel(run))}<span class="muted"> · ${(run.scouts ?? []).length} scouts</span></span>
           <span class="run-bar"><span class="run-bar-fill" style="width:${(total(run) / max) * 100}%"></span></span>
           <span class="run-total">${fmt(total(run))}<span class="muted"> / ${run.requests} req</span></span>
         </summary>
@@ -96,8 +96,15 @@ function total(row) {
   return (row.input_tokens ?? 0) + (row.output_tokens ?? 0);
 }
 
+function runLabel(run) {
+  const started = run.run_started;
+  if (!started) return run.run_date ?? "unknown";
+  const [date, time] = started.split("T");
+  return time ? `${date} ${time}` : date;
+}
+
 function key(run) {
-  return `${run.run_date ?? ""}${run.session_id ?? ""}`;
+  return `${run.run_started ?? run.run_date ?? ""}${run.run_id ?? ""}`;
 }
 
 function sum(items, pick) {

@@ -1,7 +1,18 @@
 [
   {
+    "run_id": "027b25ab-20260910T1718",
     "run_date": "2026-09-10",
+    "run_started": "2026-09-10T17:18",
     "session_id": "027b25ab-cb1d-447a-b997-322f69859601",
+    "scouts": [
+      "ti-incidents",
+      "ti-practitioner",
+      "ti-research",
+      "ti-standards",
+      "ti-supplychain",
+      "ti-synthesizer",
+      "ti-vendor"
+    ],
     "requests": 35,
     "input_tokens": 1545549,
     "output_tokens": 33498,
@@ -74,20 +85,30 @@
     ]
   },
   {
+    "run_id": "231cbde7-20260910T1925",
     "run_date": "2026-09-10",
+    "run_started": "2026-09-10T19:25",
     "session_id": "231cbde7-9fe8-4f79-935d-13b3dc0dc777",
-    "requests": 63,
-    "input_tokens": 4856449,
-    "output_tokens": 76869,
-    "cached_tokens": 3348434,
+    "scouts": [
+      "ti-incidents-toolu_01T2MkcDNhcUCxJgZLhQZcuk",
+      "ti-practitioner-toolu_01MBk3U9vuX4Lx8roSrbSPht",
+      "ti-research-toolu_01FP9R6WCEDKAcNzNbG92kHh",
+      "ti-supplychain-toolu_01CVPfikpMcXdEHcSQqPxr2a",
+      "ti-synthesizer-toolu_01ThKN5RQiH4wxJg1jzsiTCD",
+      "ti-vendor-toolu_01JvzYrHFkoVkRWa1wgtSPxw"
+    ],
+    "requests": 26,
+    "input_tokens": 1761357,
+    "output_tokens": 30686,
+    "cached_tokens": 1142817,
     "agents": [
       {
         "agent": "orchestrator",
         "model": "claude-opus-5",
-        "requests": 27,
-        "input_tokens": 2848838,
-        "output_tokens": 48577,
-        "cached_tokens": 2390041
+        "requests": 8,
+        "input_tokens": 700602,
+        "output_tokens": 15868,
+        "cached_tokens": 602642
       },
       {
         "agent": "ti-vendor-toolu_01JvzYrHFkoVkRWa1wgtSPxw",
@@ -98,44 +119,12 @@
         "cached_tokens": 294770
       },
       {
-        "agent": "ti-vendor-toolu_01NTKRLyJ2X5aCp5QMpNTwTy",
-        "model": "claude-opus-5",
-        "requests": 3,
-        "input_tokens": 361916,
-        "output_tokens": 846,
-        "cached_tokens": 97736
-      },
-      {
         "agent": "ti-practitioner-toolu_01MBk3U9vuX4Lx8roSrbSPht",
         "model": "claude-opus-5",
         "requests": 4,
         "input_tokens": 270864,
         "output_tokens": 1771,
         "cached_tokens": 163282
-      },
-      {
-        "agent": "ti-practitioner-toolu_01C5xFw4McJ4gnfMV872MP5J",
-        "model": "claude-opus-5",
-        "requests": 4,
-        "input_tokens": 253302,
-        "output_tokens": 1196,
-        "cached_tokens": 164137
-      },
-      {
-        "agent": "ti-incidents-toolu_01DKtrd281GrtjmV3P4tf4qc",
-        "model": "claude-opus-5",
-        "requests": 5,
-        "input_tokens": 176755,
-        "output_tokens": 3902,
-        "cached_tokens": 124525
-      },
-      {
-        "agent": "ti-research-toolu_016eg6ANgTcQoCBZBWx7NceD",
-        "model": "claude-opus-5",
-        "requests": 2,
-        "input_tokens": 96742,
-        "output_tokens": 2308,
-        "cached_tokens": 7049
       },
       {
         "agent": "ti-research-toolu_01FP9R6WCEDKAcNzNbG92kHh",
@@ -162,20 +151,80 @@
         "cached_tokens": 28255
       },
       {
-        "agent": "ti-supplychain-toolu_01PkuXVViqagsGjieDNPL8Jt",
-        "model": "claude-opus-5",
-        "requests": 3,
-        "input_tokens": 47201,
-        "output_tokens": 2322,
-        "cached_tokens": 23095
-      },
-      {
         "agent": "ti-synthesizer-toolu_01ThKN5RQiH4wxJg1jzsiTCD",
         "model": "claude-opus-5",
         "requests": 1,
         "input_tokens": 10759,
         "output_tokens": 5490,
         "cached_tokens": 1676
+      }
+    ]
+  },
+  {
+    "run_id": "231cbde7-20260910T2014",
+    "run_date": "2026-09-10",
+    "run_started": "2026-09-10T20:14",
+    "session_id": "231cbde7-9fe8-4f79-935d-13b3dc0dc777",
+    "scouts": [
+      "ti-incidents-toolu_01DKtrd281GrtjmV3P4tf4qc",
+      "ti-practitioner-toolu_01C5xFw4McJ4gnfMV872MP5J",
+      "ti-research-toolu_016eg6ANgTcQoCBZBWx7NceD",
+      "ti-supplychain-toolu_01PkuXVViqagsGjieDNPL8Jt",
+      "ti-synthesizer-toolu_01NAhwpfYyr8eXcEQ3Emug3F",
+      "ti-vendor-toolu_01NTKRLyJ2X5aCp5QMpNTwTy"
+    ],
+    "requests": 29,
+    "input_tokens": 2271848,
+    "output_tokens": 40521,
+    "cached_tokens": 1487463,
+    "agents": [
+      {
+        "agent": "orchestrator",
+        "model": "claude-opus-5",
+        "requests": 11,
+        "input_tokens": 1324992,
+        "output_tokens": 27047,
+        "cached_tokens": 1069245
+      },
+      {
+        "agent": "ti-vendor-toolu_01NTKRLyJ2X5aCp5QMpNTwTy",
+        "model": "claude-opus-5",
+        "requests": 3,
+        "input_tokens": 361916,
+        "output_tokens": 846,
+        "cached_tokens": 97736
+      },
+      {
+        "agent": "ti-practitioner-toolu_01C5xFw4McJ4gnfMV872MP5J",
+        "model": "claude-opus-5",
+        "requests": 4,
+        "input_tokens": 253302,
+        "output_tokens": 1196,
+        "cached_tokens": 164137
+      },
+      {
+        "agent": "ti-incidents-toolu_01DKtrd281GrtjmV3P4tf4qc",
+        "model": "claude-opus-5",
+        "requests": 5,
+        "input_tokens": 176755,
+        "output_tokens": 3902,
+        "cached_tokens": 124525
+      },
+      {
+        "agent": "ti-research-toolu_016eg6ANgTcQoCBZBWx7NceD",
+        "model": "claude-opus-5",
+        "requests": 2,
+        "input_tokens": 96742,
+        "output_tokens": 2308,
+        "cached_tokens": 7049
+      },
+      {
+        "agent": "ti-supplychain-toolu_01PkuXVViqagsGjieDNPL8Jt",
+        "model": "claude-opus-5",
+        "requests": 3,
+        "input_tokens": 47201,
+        "output_tokens": 2322,
+        "cached_tokens": 23095
       },
       {
         "agent": "ti-synthesizer-toolu_01NAhwpfYyr8eXcEQ3Emug3F",
