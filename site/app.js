@@ -1,37 +1,66 @@
 const listEl = document.getElementById("list");
 const metaEl = document.getElementById("run-meta");
 
-fetch("data/latest.json")
+fetch("data/history.json")
   .then((res) => res.json())
   .then(render)
   .catch(() => {
-    listEl.innerHTML = '<p class="empty">Could not load data/latest.json.</p>';
+    listEl.innerHTML = '<p class="empty">Could not load data/history.json.</p>';
   });
 
 function render(items) {
-  if (!items.length) {
-    metaEl.textContent = "No items cleared the bar in the latest run.";
+  if (!Array.isArray(items) || !items.length) {
+    metaEl.textContent = "Nothing published yet.";
     listEl.innerHTML = '<p class="empty">Nothing to show yet.</p>';
     return;
   }
 
-  const runDate = items[0].run_date ?? "";
-  metaEl.textContent = `${items.length} item${items.length === 1 ? "" : "s"} from the ${runDate} run.`;
+  const sorted = [...items].sort(
+    (a, b) => sortKey(b).localeCompare(sortKey(a)) || (a.title ?? "").localeCompare(b.title ?? "")
+  );
 
-  listEl.innerHTML = items
+  metaEl.textContent = `${sorted.length} finding${sorted.length === 1 ? "" : "s"}. Click a title for the TL;DR.`;
+
+  listEl.innerHTML = sorted
     .map(
       (item) => `
-    <article class="card">
-      <h2><a href="${item.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a></h2>
-      <p>${escapeHtml(item.why_it_matters)}</p>
-      <div class="tags">
-        <span class="tag">${escapeHtml(item.threat_class)}</span>
-        <span class="tag">${escapeHtml(item.source)}</span>
-        ${item.published ? `<span class="tag">${item.published}</span>` : ""}
+    <details class="finding">
+      <summary>
+        <span class="finding-title">${escapeHtml(item.title)}</span>
+        <span class="finding-meta">
+          <span class="tag">${escapeHtml(item.threat_class)}</span>
+          <span class="tag">${escapeHtml(item.source)}</span>
+          <time>${escapeHtml(item.published ?? "date unknown")}</time>
+        </span>
+      </summary>
+      <div class="finding-body">
+        <p>${escapeHtml(item.why_it_matters)}</p>
+        ${sourceLink(item.url)}
       </div>
-    </article>`
+    </details>`
     )
     .join("");
+}
+
+function sourceLink(url) {
+  const safe = safeUrl(url);
+  return safe
+    ? `<a class="source-link" href="${escapeHtml(safe)}" target="_blank" rel="noopener noreferrer">Read the source &rarr;</a>`
+    : "";
+}
+
+// Data is agent-generated, so only let real web links through.
+function safeUrl(url) {
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" || parsed.protocol === "http:" ? parsed.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function sortKey(item) {
+  return item.published ?? item.run_date ?? "";
 }
 
 function escapeHtml(str) {
