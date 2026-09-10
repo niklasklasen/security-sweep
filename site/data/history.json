@@ -68,5 +68,75 @@
 		"threat_class": "insecure-tool-use",
 		"why_it_matters": "Cached permissions cannot reliably enforce revocation, so agent authorization checks should read current authenticated state before every sensitive action.",
 		"run_date": "2026-09-10"
+	},
+	{
+		"id": "copilot-cowork-sandbox-bypass",
+		"title": "Copilot Cowork Sandbox Bypass Gives Attackers Remote Control",
+		"url": "https://promptarmor.com/resources/microsoft-copilot-cowork-sandbox-bypass",
+		"source": "PromptArmor Threat Intelligence",
+		"published": null,
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "A malicious Copilot Cowork Skill drives the out-of-sandbox file-sync service into a persistent C2 loop that reads Outlook, SharePoint and Teams data.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "anthropic-skill-scanner-backdoor",
+		"title": "Anthropic's Skill Scanner Defeated by Backdoored Skills",
+		"url": "https://promptarmor.com/resources/anthropics-skill-scanner-defeated-by-backdoored-skills",
+		"source": "PromptArmor Threat Intelligence",
+		"published": null,
+		"threat_class": "supply-chain",
+		"why_it_matters": "A backdoored Claude Skill passes Anthropic's scanner, then pulls payloads from GitHub and exfiltrates files via the Files API under default egress rules.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "ai-orchestrated-papercut-campaign",
+		"title": "AI-Orchestrated Campaign Against PaperCut NG/MF",
+		"url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+		"source": "GreyNoise",
+		"published": "2026-09-10",
+		"threat_class": "insecure-tool-use",
+		"why_it_matters": "Hundreds of LLM-driven agents weaponized PaperCut CVEs to breach 440 servers at 395 orgs, one going from initial access to domain admin in seven minutes.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "aa26-251a-frontier-model-distillation",
+		"title": "Joint Advisory AA26-251A: Industrial-Scale Distillation of US Frontier AI Models by PRC Companies",
+		"url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a",
+		"source": "CISA / NSA / FBI",
+		"published": "2026-09-09",
+		"threat_class": "model-extraction",
+		"why_it_matters": "CISA, NSA and FBI attribute mass distillation of US frontier models to six PRC firms using proxied API accounts, reshaping API abuse detection and vendor risk.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "capscope-capability-scoped-harness",
+		"title": "Authority Is Not a String: A Capability-Scoped Harness for Prompt-Injection-Resistant Coding Agents",
+		"url": "https://arxiv.org/abs/2609.08371",
+		"source": "arXiv cs.SE",
+		"published": "2026-09-08",
+		"threat_class": "indirect-injection",
+		"why_it_matters": "A harness-level capability ceiling derived from trusted input cut injected-action execution in a coding agent from ~40/75 runs to 3/75 without losing repair success.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "style-wrappers-flip-safety-judges",
+		"title": "Style Over Substance: Content-Invariant Wrappers Flip LLM Safety-Judge Verdicts",
+		"url": "https://arxiv.org/abs/2609.08236",
+		"source": "arXiv cs.AI",
+		"published": "2026-09-08",
+		"threat_class": "jailbreak",
+		"why_it_matters": "Wrapping byte-identical harmful output in refusal or 'educational' framing flips up to 20% of LLM safety-judge verdicts, making guardrail and ASR metrics gameable.",
+		"run_date": "2026-09-10"
+	},
+	{
+		"id": "unstructured-url-partition-ssrf",
+		"title": "unstructured: Server-Side Request Forgery in URL-based partitioning",
+		"url": "https://github.com/advisories/GHSA-4mvj-m6j5-pmf7",
+		"source": "GitHub Advisory Database",
+		"published": null,
+		"threat_class": "supply-chain",
+		"why_it_matters": "CVE-2026-71428 (CVSS 9.3): unstructured's URL partitioners fetch any host and return the body, giving full-read SSRF under LangChain and LlamaIndex loaders.",
+		"run_date": "2026-09-10"
 	}
 ]
